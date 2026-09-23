@@ -7,7 +7,7 @@ export default {
           surface: '#0B3056',
           border: '#16436E',
           title: '#F8FAFC',
-          body: '#94A3B8',
+          body: '#CBD5E1',
         },
         light: {
           DEFAULT: '#F8FAFC',

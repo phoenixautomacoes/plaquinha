@@ -9,7 +9,7 @@
   --bg-dark-surface: #0B3056;       /* Cartões e caixas sobre fundo escuro */
   --border-dark: #16436E;           /* Linhas e separadores no escuro */
   --text-dark-title: #F8FAFC;       /* Títulos sobre escuro */
-  --text-dark-body: #94A3B8;        /* Subtítulos e parágrafos sobre escuro */
+  --text-dark-body: #CBD5E1;        /* Subtítulos e parágrafos sobre escuro (clareado para nitidez) */
 
   /* ============================================================
      CORES CLARAS (Inspiradas no fundo limpo e títulos nítidos)
@@ -34,7 +34,7 @@
   --color-dark-surface: #0B3056;
   --color-dark-border: #16436E;
   --color-dark-title: #F8FAFC;
-  --color-dark-body: #94A3B8;
+  --color-dark-body: #CBD5E1;
 
   --color-light: #F8FAFC;
   --color-light-surface: #FFFFFF;

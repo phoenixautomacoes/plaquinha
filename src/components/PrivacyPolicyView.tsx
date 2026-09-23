@@ -112,7 +112,7 @@ export const PrivacyPolicyView: React.FC<PrivacyPolicyViewProps> = ({ onBack }) 
 
             <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3">
               <span className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">CNPJ</span>
-              <span className="text-xs sm:text-sm font-bold text-white block mt-0.5">31.419.058/0001-06</span>
+              <span className="text-xs sm:text-sm font-bold text-white block mt-0.5">31.418.058/0001-06</span>
             </div>
 
             <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3">
@@ -579,7 +579,7 @@ export const PrivacyPolicyView: React.FC<PrivacyPolicyViewProps> = ({ onBack }) 
             <div className="pt-2 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-400">
               <div className="flex items-center gap-2">
                 <Building2 className="w-4 h-4 text-slate-500" />
-                <span>Porto Alegre — RS · CNPJ: 31.419.058/0001-06</span>
+                <span>Porto Alegre — RS · CNPJ: 31.418.058/0001-06</span>
               </div>
               <span className="text-slate-500">Documento em estrita conformidade com a Lei nº 13.709/2018 (LGPD).</span>
             </div>
@@ -623,7 +623,7 @@ export const PrivacyPolicyView: React.FC<PrivacyPolicyViewProps> = ({ onBack }) 
             Phoenix Automações · Tecnologia em Soluções Inteligentes de Balcão e Automação Empresarial
           </p>
           <p className="text-[11px] text-slate-600">
-            © {new Date().getFullYear()} Phoenix Automações. Todos os direitos reservados. CNPJ: 31.419.058/0001-06.
+            © {new Date().getFullYear()} Phoenix Automações. Todos os direitos reservados. CNPJ: 31.418.058/0001-06.
           </p>
         </div>
       </footer>

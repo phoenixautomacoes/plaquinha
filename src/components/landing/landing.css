@@ -14,7 +14,7 @@
   --bg-dark-surface: #0B3056;       /* Cartões e caixas sobre fundo escuro */
   --border-dark: #16436E;           /* Linhas e separadores no escuro */
   --text-dark-title: #F8FAFC;       /* Títulos sobre escuro */
-  --text-dark-body: #94A3B8;        /* Subtítulos e parágrafos sobre escuro */
+  --text-dark-body: #CBD5E1;        /* Subtítulos e parágrafos sobre escuro (clareado para nitidez) */
 
   /* ============================================================
      CORES CLARAS (Inspiradas no fundo limpo e títulos nítidos)
@@ -285,14 +285,53 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: var(--text-dark-body);
-  border: 1px solid var(--border-dark);
-  background: rgba(11, 48, 86, 0.6);
+  color: #F8FAFC;
+  border: 1px solid rgba(45, 212, 191, 0.4);
+  background: rgba(11, 48, 86, 0.85);
   border-radius: 24px;
-  padding: 9px 11px;
-  font-size: 8px;
+  padding: 9px 13px;
+  font-size: 8.5px;
   font-weight: 600;
   letter-spacing: 0.8px;
+  transition: all 0.2s;
+}
+.ecosystem-badge:hover {
+  background: rgba(11, 48, 86, 0.98);
+  border-color: rgba(45, 212, 191, 0.7);
+  color: #FFFFFF;
+}
+.ecosystem-badge .status-dot {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.85);
+  display: inline-block;
+  flex-shrink: 0;
+}
+.ecosystem-badge .status-dot::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: #22c55e;
+  opacity: 0.85;
+  animation: green-dot-pulse 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes green-dot-pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
 }
 .status-dot {
   width: 6px;
@@ -305,9 +344,9 @@
 }
 .hero-eyebrow {
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 2px;
-  color: var(--text-dark-body);
+  color: #E2E8F0;
   margin: 32px 0 18px;
 }
 .hero-copy h1 {
@@ -334,14 +373,14 @@
 }
 .hero-description {
   font-size: 14px;
-  color: var(--text-dark-body);
+  color: #E2E8F0;
   line-height: 1.9;
   max-width: 455px;
   margin-top: 26px;
 }
 .hero-description strong {
-  font-weight: 500;
-  color: var(--text-dark-title);
+  font-weight: 600;
+  color: #FFFFFF;
 }
 .hero-buttons {
   display: flex;
@@ -439,19 +478,20 @@
   align-items: center;
   padding: 19px 22px 0;
   font-size: 9px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.3px;
-  color: var(--text-dark-body);
+  color: #E2E8F0;
 }
 .configurator-topline > span:first-child {
   display: flex;
   align-items: center;
   gap: 9px;
-  color: var(--text-dark-title);
+  color: #FFFFFF;
 }
 .configurator-topline > span:last-child {
   letter-spacing: 0.5px;
   font-size: 10px;
+  color: #CBD5E1;
 }
 .product-stage {
   height: 354px;
@@ -500,6 +540,75 @@
   overflow: hidden;
   border: 1px solid #e3e7ec;
   z-index: 2;
+}
+.plate-bg-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1535 / 1771;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+.plate-custom-overlay {
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  right: 6%;
+  height: 22.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+}
+.plate-custom-overlay .plate-business {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  min-height: unset;
+}
+.plate-custom-overlay .plate-logo {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plate-custom-overlay .plate-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.plate-custom-overlay .google-g {
+  font-size: 32px;
+  line-height: 1;
+}
+.plate-custom-overlay .plate-business-name {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.6px;
+  color: #14212a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 125px;
+}
+.plate-compact .plate-custom-overlay .plate-logo {
+  width: 22px;
+  height: 22px;
+}
+.plate-compact .plate-custom-overlay .google-g {
+  font-size: 22px;
+}
+.plate-compact .plate-custom-overlay .plate-business-name {
+  font-size: 7.5px;
+  max-width: 88px;
 }
 .plate-color-line {
   height: 4px;

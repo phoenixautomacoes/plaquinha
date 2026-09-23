@@ -879,8 +879,7 @@ export function LandingPageView({
           </div>
           <div className="footer-bottom">
             <span>
-              © {new Date().getFullYear()} Phoenix Automações · CNPJ
-              51.418.058/0001-06
+              © {new Date().getFullYear()} Phoenix Automações · CNPJ 31.418.058/0001-06
             </span>
             <p>
               Google e Google Maps são marcas de seus respectivos titulares. A
