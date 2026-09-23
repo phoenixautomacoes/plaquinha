@@ -1,6 +1,53 @@
 @import "tailwindcss";
 @import "./components/landing/landing.css";
 
+:root {
+  /* ============================================================
+     CORES ESCURAS (Suavizadas: azul-escuro acetinado em vez de preto)
+     ============================================================ */
+  --bg-dark-primary: #0F172A;       /* Hero, rodapé e secções escuras */
+  --bg-dark-surface: #1E293B;       /* Cartões e caixas sobre fundo escuro */
+  --border-dark: #334155;           /* Linhas e separadores no escuro */
+  --text-dark-title: #F1F5F9;       /* Títulos sobre escuro (off-white sem estourar) */
+  --text-dark-body: #94A3B8;        /* Subtítulos e parágrafos sobre escuro */
+
+  /* ============================================================
+     CORES CLARAS (Escurecidas/aquecidas: elimina o clarão e dá contraste)
+     ============================================================ */
+  --bg-light-primary: #F8FAFC;      /* Fundo geral das secções claras */
+  --bg-light-surface: #FFFFFF;      /* Fundo dos cartões e caixas claras */
+  --border-light: #CBD5E1;          /* Bordas visíveis dos cartões claros */
+  --text-light-title: #0F172A;      /* Títulos no claro (máxima nitidez) */
+  --text-light-body: #334155;       /* Parágrafos no claro (legível sem forçar a vista) */
+  --text-light-muted: #64748B;      /* Textos secundários, notas e rodapés internos */
+
+  /* ============================================================
+     DESTAQUES E AÇÕES (CTAs e Interações)
+     ============================================================ */
+  --accent-primary: #2563EB;        /* Botão principal / CTA */
+  --accent-primary-hover: #1D4ED8;  /* Efeito hover do botão */
+  --accent-secondary: #38BDF8;      /* Detalhes finos, badges e destaques */
+}
+
+@theme {
+  --color-dark: #0F172A;
+  --color-dark-surface: #1E293B;
+  --color-dark-border: #334155;
+  --color-dark-title: #F1F5F9;
+  --color-dark-body: #94A3B8;
+
+  --color-light: #F8FAFC;
+  --color-light-surface: #FFFFFF;
+  --color-light-border: #CBD5E1;
+  --color-light-title: #0F172A;
+  --color-light-body: #334155;
+  --color-light-muted: #64748B;
+
+  --color-brand-primary: #2563EB;
+  --color-brand-hover: #1D4ED8;
+  --color-brand-cyan: #38BDF8;
+}
+
 @layer utilities {
   /* Ocultar barra de rolagem mas manter funcionalidade */
   .scrollbar-none::-webkit-scrollbar {
