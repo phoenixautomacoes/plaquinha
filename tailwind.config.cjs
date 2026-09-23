@@ -3,24 +3,24 @@ module.exports = {
     extend: {
       colors: {
         dark: {
-          DEFAULT: '#0F172A',
-          surface: '#1E293B',
-          border: '#334155',
-          title: '#F1F5F9',
+          DEFAULT: '#052440',
+          surface: '#0B3056',
+          border: '#16436E',
+          title: '#F8FAFC',
           body: '#94A3B8',
         },
         light: {
           DEFAULT: '#F8FAFC',
           surface: '#FFFFFF',
-          border: '#CBD5E1',
-          title: '#0F172A',
+          border: '#E2E8F0',
+          title: '#052440',
           body: '#334155',
           muted: '#64748B',
         },
         brand: {
-          primary: '#2563EB',
-          hover: '#1D4ED8',
-          cyan: '#38BDF8',
+          primary: '#0C9295',
+          hover: '#087B7E',
+          cyan: '#2DD4BF',
         },
       },
     },

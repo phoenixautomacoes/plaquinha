@@ -3,49 +3,49 @@
 
 :root {
   /* ============================================================
-     CORES ESCURAS (Suavizadas: azul-escuro acetinado em vez de preto)
+     CORES ESCURAS (Inspiradas no azul marinho profundo / midnight navy)
      ============================================================ */
-  --bg-dark-primary: #0F172A;       /* Hero, rodapé e secções escuras */
-  --bg-dark-surface: #1E293B;       /* Cartões e caixas sobre fundo escuro */
-  --border-dark: #334155;           /* Linhas e separadores no escuro */
-  --text-dark-title: #F1F5F9;       /* Títulos sobre escuro (off-white sem estourar) */
+  --bg-dark-primary: #052440;       /* Hero, rodapé e secções escuras */
+  --bg-dark-surface: #0B3056;       /* Cartões e caixas sobre fundo escuro */
+  --border-dark: #16436E;           /* Linhas e separadores no escuro */
+  --text-dark-title: #F8FAFC;       /* Títulos sobre escuro */
   --text-dark-body: #94A3B8;        /* Subtítulos e parágrafos sobre escuro */
 
   /* ============================================================
-     CORES CLARAS (Escurecidas/aquecidas: elimina o clarão e dá contraste)
+     CORES CLARAS (Inspiradas no fundo limpo e títulos nítidos)
      ============================================================ */
   --bg-light-primary: #F8FAFC;      /* Fundo geral das secções claras */
   --bg-light-surface: #FFFFFF;      /* Fundo dos cartões e caixas claras */
-  --border-light: #CBD5E1;          /* Bordas visíveis dos cartões claros */
-  --text-light-title: #0F172A;      /* Títulos no claro (máxima nitidez) */
-  --text-light-body: #334155;       /* Parágrafos no claro (legível sem forçar a vista) */
-  --text-light-muted: #64748B;      /* Textos secundários, notas e rodapés internos */
+  --border-light: #E2E8F0;          /* Bordas sutis dos cartões claros */
+  --text-light-title: #052440;      /* Títulos no claro (marinho profundo) */
+  --text-light-body: #334155;       /* Parágrafos no claro (cinza-ardósia escuro) */
+  --text-light-muted: #64748B;      /* Textos secundários e notas */
 
   /* ============================================================
-     DESTAQUES E AÇÕES (CTAs e Interações)
+     DESTAQUES E AÇÕES (Verde-água / Teal e Ciano da referência)
      ============================================================ */
-  --accent-primary: #2563EB;        /* Botão principal / CTA */
-  --accent-primary-hover: #1D4ED8;  /* Efeito hover do botão */
-  --accent-secondary: #38BDF8;      /* Detalhes finos, badges e destaques */
+  --accent-primary: #0C9295;        /* Botão principal / CTA teal */
+  --accent-primary-hover: #087B7E;  /* Efeito hover do botão */
+  --accent-secondary: #2DD4BF;      /* Detalhes finos, badges e ciano/teal claro */
 }
 
 @theme {
-  --color-dark: #0F172A;
-  --color-dark-surface: #1E293B;
-  --color-dark-border: #334155;
-  --color-dark-title: #F1F5F9;
+  --color-dark: #052440;
+  --color-dark-surface: #0B3056;
+  --color-dark-border: #16436E;
+  --color-dark-title: #F8FAFC;
   --color-dark-body: #94A3B8;
 
   --color-light: #F8FAFC;
   --color-light-surface: #FFFFFF;
-  --color-light-border: #CBD5E1;
-  --color-light-title: #0F172A;
+  --color-light-border: #E2E8F0;
+  --color-light-title: #052440;
   --color-light-body: #334155;
   --color-light-muted: #64748B;
 
-  --color-brand-primary: #2563EB;
-  --color-brand-hover: #1D4ED8;
-  --color-brand-cyan: #38BDF8;
+  --color-brand-primary: #0C9295;
+  --color-brand-hover: #087B7E;
+  --color-brand-cyan: #2DD4BF;
 }
 
 @layer utilities {
