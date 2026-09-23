@@ -516,13 +516,23 @@
   border-style: dashed;
   border-color: rgba(45, 212, 191, 0.08);
 }
+@keyframes plate-levitate {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
 .product-plate {
   position: relative;
-  width: 202px;
+  width: 242px;
   transform: none;
-  animation: plate-arrive 0.8s ease-out both;
+  animation:
+    plate-arrive 0.8s ease-out both,
+    plate-levitate 5.5s ease-in-out 0.8s infinite;
   z-index: 2;
-  margin-top: -7px;
+  margin-top: -12px;
 }
 .plate-object {
   width: 100%;
@@ -552,7 +562,7 @@
 }
 .plate-custom-overlay {
   position: absolute;
-  top: 3%;
+  top: 3.2%;
   left: 6%;
   right: 6%;
   height: 22.5%;
@@ -566,13 +576,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
+  gap: 10px;
   width: 100%;
   min-height: unset;
 }
 .plate-custom-overlay .plate-logo {
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -584,11 +594,11 @@
   object-fit: contain;
 }
 .plate-custom-overlay .google-g {
-  font-size: 32px;
+  font-size: 36px;
   line-height: 1;
 }
 .plate-custom-overlay .plate-business-name {
-  font-size: 10px;
+  font-size: 11.5px;
   text-transform: uppercase;
   font-weight: 800;
   line-height: 1.25;
@@ -597,18 +607,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 125px;
+  max-width: 150px;
 }
 .plate-compact .plate-custom-overlay .plate-logo {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 .plate-compact .plate-custom-overlay .google-g {
-  font-size: 22px;
+  font-size: 24px;
 }
 .plate-compact .plate-custom-overlay .plate-business-name {
-  font-size: 7.5px;
-  max-width: 88px;
+  font-size: 8.5px;
+  max-width: 95px;
 }
 .plate-color-line {
   height: 4px;
@@ -992,13 +1002,13 @@
 }
 .trust-item strong {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text-light-title);
 }
 .trust-item span {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--text-light-muted);
   margin-top: 4px;
 }
@@ -1007,9 +1017,9 @@
 }
 .section-index {
   display: block;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 1.7px;
+  letter-spacing: 2px;
   color: var(--accent-primary);
   margin-bottom: 22px;
 }
@@ -1351,13 +1361,43 @@
 .orbit-inner:after {
   display: none;
 }
+@keyframes subtle-float-1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes subtle-float-2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+@keyframes subtle-float-center {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow:
+      0 0 50px rgba(5, 36, 64, 0.6),
+      0 0 0 15px rgba(11, 48, 86, 0.3);
+  }
+  50% {
+    transform: translate(-50%, -52%) scale(1.02);
+    box-shadow:
+      0 0 65px rgba(45, 212, 191, 0.25),
+      0 0 0 18px rgba(11, 48, 86, 0.4);
+  }
+}
 .ecosystem-center {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 130px;
-  height: 130px;
+  width: 148px;
+  height: 148px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1368,21 +1408,29 @@
   box-shadow:
     0 0 50px rgba(5, 36, 64, 0.6),
     0 0 0 15px rgba(11, 48, 86, 0.3);
-  gap: 4px;
+  gap: 5px;
+  animation: subtle-float-center 6s ease-in-out infinite;
+  z-index: 2;
 }
 .ecosystem-center img {
-  height: 55px;
-  width: 48px;
+  height: 72px;
+  width: 64px;
   object-fit: contain;
   margin-bottom: 2px;
+  filter: drop-shadow(0 4px 14px rgba(45, 212, 191, 0.35));
+  transition: transform 0.3s ease;
+}
+.ecosystem-center:hover img {
+  transform: scale(1.08);
 }
 .ecosystem-center strong {
-  font-size: 12px;
+  font-size: 13.5px;
   letter-spacing: 2px;
+  font-weight: 700;
   color: var(--text-dark-title);
 }
 .ecosystem-center > span {
-  font-size: 6px;
+  font-size: 8.5px;
   letter-spacing: 2px;
   color: var(--text-dark-body);
 }
@@ -1391,36 +1439,40 @@
   display: flex;
   align-items: center;
   gap: 13px;
-  padding: 18px;
+  padding: 16px 18px;
   border: 1px solid var(--border-dark);
   border-radius: 12px;
   background: var(--bg-dark-surface);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  width: 231px;
+  width: 250px;
   color: var(--text-dark-title);
   transition:
     transform 0.2s,
-    border-color 0.2s;
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 .ecosystem-node:hover {
-  transform: translateY(-4px);
+  animation-play-state: paused;
+  transform: translateY(-6px);
   border-color: var(--accent-secondary);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(45, 212, 191, 0.2);
 }
 .ecosystem-node > svg:first-child {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   color: var(--accent-secondary);
   stroke-width: 1.4;
+  flex-shrink: 0;
 }
 .ecosystem-node strong {
   display: block;
-  font-size: 11px;
+  font-size: 13.5px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.4;
   color: var(--text-dark-title);
 }
 .ecosystem-node small {
-  font-size: 8px;
+  font-size: 11px;
   display: block;
   margin-top: 3px;
   color: var(--text-dark-body);
@@ -1432,29 +1484,33 @@
 .node-web {
   left: 0;
   top: 28px;
+  animation: subtle-float-1 5.5s ease-in-out infinite;
 }
 .node-sofia {
   right: -4px;
   top: 107px;
+  animation: subtle-float-2 6.2s ease-in-out infinite 0.8s;
 }
 .node-crm {
   left: -9px;
   bottom: 97px;
+  animation: subtle-float-2 5.8s ease-in-out infinite 1.5s;
 }
 .node-nfc {
   right: 3px;
   bottom: 14px;
   border-color: var(--accent-secondary);
   background: #0B3056;
+  animation: subtle-float-1 6.5s ease-in-out infinite 2.2s;
 }
 .node-nfc .you-are-here {
   position: absolute;
   bottom: -10px;
   right: 14px;
-  font-size: 6px;
+  font-size: 8px;
   font-weight: 700;
   letter-spacing: 1px;
-  padding: 4px 8px;
+  padding: 4px 9px;
   background: var(--accent-secondary);
   border: 1px solid var(--accent-secondary);
   border-radius: 3px;
@@ -1503,8 +1559,8 @@
   color: var(--text-light-title);
 }
 .detail-card > p {
-  font-size: 11px;
-  line-height: 1.9;
+  font-size: 13px;
+  line-height: 1.8;
   color: var(--text-light-body);
   margin: 0 0 25px;
   max-width: 280px;
@@ -1560,7 +1616,7 @@
 }
 .brand-preview > span {
   display: block;
-  font-size: 8px;
+  font-size: 11px;
   color: var(--text-light-muted);
   margin-top: 18px;
 }
@@ -1581,7 +1637,7 @@
   border-radius: 7px;
   background: var(--bg-light-primary);
   padding: 13px 12px;
-  font-size: 10px;
+  font-size: 13px;
   color: var(--text-light-body);
 }
 .destination-list > span > svg:last-child {
@@ -1611,9 +1667,9 @@
   outline: 1px dashed var(--border-light);
   outline-offset: 8px;
   aspect-ratio: 2/3;
-  width: 79px;
+  width: 85px;
   transform: rotate(-8deg);
-  border-radius: 5px;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1624,12 +1680,14 @@
   box-shadow: 5px 8px 0 var(--border-light);
 }
 .size-visual > div > span {
-  font-size: 8px;
+  font-size: 11px;
+  font-weight: 600;
 }
 .size-visual > span {
-  font-size: 6px;
-  letter-spacing: 0.7px;
+  font-size: 10px;
+  letter-spacing: 0.8px;
   line-height: 1.8;
+  font-weight: 500;
   color: var(--text-light-muted);
 }
 .use-cases .section-heading {
@@ -2694,10 +2752,10 @@
     font-size: 8px;
   }
   .product-stage {
-    height: 333px;
+    height: 340px;
   }
   .product-plate {
-    width: 188px;
+    width: 215px;
   }
   .product-float-tag {
     right: 13px;
@@ -2706,13 +2764,13 @@
     gap: 5px;
   }
   .product-float-tag span {
-    font-size: 7px;
+    font-size: 8.5px;
   }
   .product-float-tag > svg {
     width: 14px;
   }
   .product-caption {
-    font-size: 6px;
+    font-size: 8px;
     right: 16px;
     bottom: 16px;
   }
@@ -2731,7 +2789,7 @@
     gap: 9px;
   }
   .configurator-fields label {
-    font-size: 8px;
+    font-size: 9px;
   }
   .configurator-fields input:not([type="file"]) {
     font-size: 16px;
@@ -2739,26 +2797,26 @@
     letter-spacing: -0.3px;
   }
   .configurator-fields input::placeholder {
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0;
   }
   .upload-button {
-    font-size: 9px;
+    font-size: 9.5px;
     padding: 8px;
     gap: 5px;
   }
   .upload-meta {
-    font-size: 6.5px;
+    font-size: 7.5px;
   }
   .upload-meta button {
-    font-size: 7px;
+    font-size: 8px;
   }
   .configurator-submit {
-    font-size: 10px;
+    font-size: 11px;
     padding: 13px 10px;
   }
   .configurator-note {
-    font-size: 7px;
+    font-size: 8px;
   }
   .trust-strip > .phx-container {
     gap: 22px 13px;
@@ -2771,10 +2829,10 @@
     padding-left: 0;
   }
   .trust-item strong {
-    font-size: 10px;
+    font-size: 13px;
   }
   .trust-item span {
-    font-size: 8px;
+    font-size: 11px;
   }
   .trust-item > svg {
     width: 20px;
@@ -2900,7 +2958,7 @@
     font-size: 11px;
   }
   .ecosystem-copy > small {
-    font-size: 8px;
+    font-size: 10px;
   }
   .ecosystem-map {
     height: 390px;
@@ -2909,15 +2967,15 @@
     margin-inline: auto;
   }
   .ecosystem-node {
-    width: 205px;
+    width: 215px;
     gap: 10px;
     padding: 14px;
   }
   .ecosystem-node strong {
-    font-size: 11px;
+    font-size: 12.5px;
   }
   .ecosystem-node small {
-    font-size: 8px;
+    font-size: 10px;
   }
   .node-web {
     left: 1px;
@@ -2937,18 +2995,18 @@
   }
   .ecosystem-center {
     top: 50%;
-    width: 100px;
-    height: 100px;
+    width: 118px;
+    height: 118px;
   }
   .ecosystem-center img {
-    width: 33px;
-    height: 38px;
+    width: 48px;
+    height: 54px;
   }
   .ecosystem-center strong {
-    font-size: 10px;
+    font-size: 11.5px;
   }
   .ecosystem-center > span {
-    font-size: 5px;
+    font-size: 7.5px;
   }
   .ecosystem-orbit {
     width: 300px;
@@ -2976,7 +3034,7 @@
     max-width: 275px;
   }
   .detail-card > p {
-    font-size: 12px;
+    font-size: 13px;
     max-width: none;
   }
   .detail-size {
@@ -2991,14 +3049,14 @@
     min-height: 140px;
   }
   .destination-list > span {
-    font-size: 11px;
+    font-size: 12.5px;
     padding: 14px;
   }
   .size-visual > div {
     width: 84px;
   }
   .size-visual > span {
-    font-size: 7px;
+    font-size: 9.5px;
   }
   .use-cases .section-heading {
     text-align: left;
