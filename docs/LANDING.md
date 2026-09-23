@@ -8,7 +8,9 @@ A página pública apresenta a plaquinha como parte do ecossistema Phoenix Autom
 
 Composição original inspirada nos modelos [AI Automation Hero](https://github.com/xiiiabu/motionsites.ai/blob/main/prompts/AI_Automation_Hero.md), [Liquid Glass Agency](https://github.com/xiiiabu/motionsites.ai/blob/main/prompts/Liquid_Glass_Agency.md) e [Nexora Automation](https://github.com/xiiiabu/motionsites.ai/blob/main/prompts/Nexora_Automation.md): abertura escura, hierarquia tipográfica, superfícies translúcidas e produto construído em HTML/CSS. Não usamos vídeos de fundo, bibliotecas de animação adicionais, estatísticas fictícias ou depoimentos inventados.
 
-O logotipo Phoenix foi mantido e otimizado para WebP. A fonte Plus Jakarta Sans é servida localmente, com licença em `public/fonts/OFL.txt`. As animações de entrada usam CSS e IntersectionObserver e respeitam a preferência de movimento reduzido. O conteúdo permanece visível se o observador não estiver disponível.
+A paleta acompanha os azuis do logotipo Phoenix: azul-claro nos destaques, azul-marinho nas áreas escuras e superfícies em azul suave. As cores oficiais da marca Google e das estrelas são preservadas. A prévia principal da placa permanece reta.
+
+O cabeçalho e o rodapé usam o logotipo Phoenix fornecido, com transparência preservada, margens vazias removidas e formato WebP otimizado. A fonte Plus Jakarta Sans é servida localmente, com licença em `public/fonts/OFL.txt`. As animações de entrada usam CSS e IntersectionObserver e respeitam a preferência de movimento reduzido. O conteúdo permanece visível se o observador não estiver disponível.
 
 ## Configurador e conversão
 

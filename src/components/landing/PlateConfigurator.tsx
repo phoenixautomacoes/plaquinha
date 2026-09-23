@@ -178,7 +178,7 @@ export function PlateConfigurator({
         )}
         {complete ? (
           <a
-            className="phx-button button-mint configurator-submit"
+            className="phx-button button-blue configurator-submit"
             href={whatsappLink(whatsappNumber, message)}
             target="_blank"
             rel="noopener noreferrer"

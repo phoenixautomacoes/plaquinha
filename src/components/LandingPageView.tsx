@@ -211,7 +211,7 @@ export function LandingPageView({
             className="phx-brand"
             aria-label="Phoenix NFC Pro — início"
           >
-            <img src="/phoenix-mark.webp" width="38" height="44" alt="" />
+            <img src="/phoenix-logo.webp" width="32" height="51" alt="" />
             <span>
               PHOENIX <b>NFC PRO</b>
               <small>por Phoenix Automações</small>
@@ -287,7 +287,7 @@ export function LandingPageView({
                 celular e encontra o caminho para avaliar sua empresa.
               </p>
               <div className="hero-buttons">
-                <a className="phx-button button-mint" href="#personalizar">
+                <a className="phx-button button-blue" href="#personalizar">
                   Personalizar minha placa <ArrowUpRight size={19} />
                 </a>
                 <a className="hero-secondary" href="#como-funciona">
@@ -708,7 +708,7 @@ export function LandingPageView({
                   </div>
                   <p className="plan-detail">{plan.detail}</p>
                   <a
-                    className={`phx-button ${index === 1 ? "button-mint" : "button-outline"}`}
+                    className={`phx-button ${index === 1 ? "button-blue" : "button-outline"}`}
                     href={whatsappLink(
                       whatsappNumber,
                       `Olá! Tenho interesse no pacote *${plan.name}* (R$ ${plan.price}) da Phoenix Automações. Podemos confirmar a personalização e as condições de entrega?`,
@@ -818,7 +818,7 @@ export function LandingPageView({
               Veja sua placa personalizada e dê o primeiro passo com a Phoenix.
             </p>
             <div>
-              <a className="phx-button button-mint" href="#personalizar">
+              <a className="phx-button button-blue" href="#personalizar">
                 Criar minha placa <ArrowUpRight size={19} />
               </a>
               <a
@@ -845,10 +845,10 @@ export function LandingPageView({
               rel="noopener noreferrer"
             >
               <img
-                src="/phoenix-mark.webp"
+                src="/phoenix-logo.webp"
                 alt=""
-                width="38"
-                height="44"
+                width="32"
+                height="51"
                 loading="lazy"
                 decoding="async"
               />
