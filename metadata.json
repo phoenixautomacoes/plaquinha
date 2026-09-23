@@ -1,0 +1,6 @@
+{
+  "name": "PlacaNFC Pro · Phoenix Automações",
+  "description": "Sistema completo e Landing Page de vendas para placas inteligentes NFC e QR Code de avaliação do Google 5 Estrelas da Phoenix Automações: redirecionador dinâmico 302, controle de estoque e artes para gráfica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
