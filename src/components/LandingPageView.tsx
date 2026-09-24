@@ -301,7 +301,7 @@ export function LandingPageView({
                 <div>
                   <span>A partir de</span>
                   <strong>
-                    R$ 119<small> / placa</small>
+                    R$ 119,90<small> / placa</small>
                   </strong>
                 </div>
                 <span className="hero-purchase-divider" />
@@ -704,14 +704,14 @@ export function LandingPageView({
                   <p className="plan-description">{plan.description}</p>
                   <div className="plan-price">
                     <span>R$</span>
-                    <strong>{plan.price}</strong>
+                    <strong>{plan.displayPrice || plan.price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</strong>
                   </div>
                   <p className="plan-detail">{plan.detail}</p>
                   <a
                     className={`phx-button ${index === 1 ? "button-blue" : "button-outline"}`}
                     href={whatsappLink(
                       whatsappNumber,
-                      `Olá! Tenho interesse no pacote *${plan.name}* (R$ ${plan.price}) da Phoenix Automações. Podemos confirmar a personalização e as condições de entrega?`,
+                      `Olá! Tenho interesse no pacote *${plan.name}* (R$ ${plan.displayPrice || plan.price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}) da Phoenix Automações. Podemos confirmar a personalização e as condições de entrega?`,
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -721,7 +721,7 @@ export function LandingPageView({
                   </a>
                   <ul>
                     {plan.features.map((feature) => (
-                      <li key={feature}>
+                       <li key={feature}>
                         <Check size={16} />
                         <span>{feature}</span>
                       </li>
@@ -737,6 +737,39 @@ export function LandingPageView({
                 combos, consulte as condições de domínio, hospedagem e
                 renovação. Serviços de Sofia e CRM são contratados à parte.
               </p>
+            </div>
+
+            {/* Campo: CONSULTE VALORES PARA SISTEMAS */}
+            <div className="systems-inquiry-box" data-reveal id="consulte-sistemas">
+              <div className="systems-inquiry-content">
+                <div className="systems-inquiry-icon" aria-hidden="true">
+                  <Layers3 size={24} />
+                </div>
+                <div className="systems-inquiry-text">
+                  <span className="systems-inquiry-badge">AUTOMAÇÃO &amp; SISTEMAS SOB MEDIDA</span>
+                  <h3 className="systems-inquiry-title">CONSULTE VALORES PARA SISTEMAS</h3>
+                  <p className="systems-inquiry-desc">
+                    Precisa de integração com CRM, agente de IA Sofia no WhatsApp oficial, fluxos multiatendentes ou sistemas corporativos personalizados? Consulte nossa equipe de engenharia.
+                  </p>
+                </div>
+              </div>
+              <div className="systems-inquiry-action">
+                <a
+                  className="phx-button button-blue systems-inquiry-button"
+                  href={whatsappLink(
+                    whatsappNumber,
+                    "Olá! Gostaria de consultar os valores para sistemas e automações da Phoenix Automações.",
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="btn-consulte-valores-sistemas"
+                  title="Consulte Valores para Sistemas no WhatsApp"
+                >
+                  <MessageCircle size={18} />
+                  <span>CONSULTE VALORES PARA SISTEMAS</span>
+                  <ArrowUpRight size={17} />
+                </a>
+              </div>
             </div>
           </div>
         </section>

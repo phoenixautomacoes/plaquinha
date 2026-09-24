@@ -4,7 +4,8 @@ export const PHOENIX_URL = "https://phoenixautomacoes.com.br/";
 export const plans = [
   {
     name: "Placa Balcão Express",
-    price: 119,
+    price: 119.9,
+    displayPrice: "119,90",
     label: "O primeiro toque",
     description: "Sua marca no balcão. Seu cliente mais perto.",
     detail: "Placa com pagamento único",
@@ -18,7 +19,8 @@ export const plans = [
   },
   {
     name: "Combo Turbo + Landing Page",
-    price: 497,
+    price: 497.9,
+    displayPrice: "497,90",
     label: "Do físico ao digital",
     description: "A placa e uma página para apresentar seu negócio.",
     detail: "Placa + criação da landing page",
@@ -33,7 +35,8 @@ export const plans = [
   },
   {
     name: "Kit Empresa Completa",
-    price: 697,
+    price: 697.9,
+    displayPrice: "697,90",
     label: "Presença mais completa",
     description: "Seu balcão, seu site e seu perfil no Google.",
     detail: "Placa + landing + configuração Google",
@@ -70,7 +73,7 @@ export const faqs = [
   },
   {
     q: "Tem mensalidade? O que está incluído nos combos?",
-    a: "A Placa Balcão Express custa R$ 119 e não tem mensalidade obrigatória. O Combo Turbo custa R$ 497 e inclui a criação da landing page; o Kit Empresa Completa custa R$ 697 e acrescenta a configuração do Perfil da Empresa no Google. Confirme no atendimento as condições de domínio, hospedagem, renovação e entrega. Sofia, CRM e outros serviços do ecossistema são contratados à parte.",
+    a: "A Placa Balcão Express custa R$ 119,90 e não tem mensalidade obrigatória. O Combo Turbo custa R$ 497,90 e inclui a criação da landing page; o Kit Empresa Completa custa R$ 697,90 e acrescenta a configuração do Perfil da Empresa no Google. Confirme no atendimento as condições de domínio, hospedagem, renovação e entrega. Sofia, CRM e outros serviços do ecossistema são contratados à parte.",
   },
   {
     q: "Qual é o tamanho e onde posso colocar?",
