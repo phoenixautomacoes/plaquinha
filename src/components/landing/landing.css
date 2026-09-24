@@ -1989,44 +1989,7 @@
   z-index: 2;
 }
 .price-card-spotlight {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.45s ease;
-  background:
-    radial-gradient(
-      360px circle at var(--mouse-x, 50%) var(--mouse-y, 20%),
-      rgba(12, 146, 149, 0.13),
-      rgba(45, 212, 191, 0.05) 45%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse 85% 35% at 50% 0%,
-      rgba(45, 212, 191, 0.16),
-      transparent 70%
-    );
-}
-.price-featured .price-card-spotlight {
-  background:
-    radial-gradient(
-      380px circle at var(--mouse-x, 50%) var(--mouse-y, 20%),
-      rgba(45, 212, 191, 0.22),
-      rgba(255, 255, 255, 0.08) 40%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse 90% 40% at 50% 0%,
-      rgba(255, 255, 255, 0.18),
-      rgba(45, 212, 191, 0.12) 45%,
-      transparent 75%
-    );
-}
-.price-card.price-card-active .price-card-spotlight {
-  opacity: 1;
+  display: none;
 }
 .price-card.price-card-active:not(.will-reveal:not(.is-visible)) {
   transform: perspective(1100px) translateY(-18px) scale(1.025) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
@@ -2037,17 +2000,13 @@
   z-index: 1;
 }
 .price-card:not(.price-featured).price-card-active {
-  border-color: rgba(12, 146, 149, 0.55);
-  box-shadow:
-    0 28px 55px -12px rgba(5, 36, 64, 0.18),
-    0 0 0 1px rgba(12, 146, 149, 0.22),
-    0 -8px 28px -8px rgba(45, 212, 191, 0.25);
+  border-color: #cbd5e1;
+  box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.14);
 }
 .price-card:not(.price-featured).price-card-active .button-outline {
   background: var(--accent-primary);
   color: #ffffff;
   border-color: var(--accent-primary);
-  box-shadow: 0 10px 22px -4px rgba(12, 146, 149, 0.4);
 }
 .plan-eyebrow {
   font-size: 8px;
@@ -2158,11 +2117,8 @@
   box-shadow: 0 20px 35px -5px rgba(15, 23, 42, 0.35);
 }
 .price-featured.price-card-active {
-  border-color: rgba(45, 212, 191, 0.65);
-  box-shadow:
-    0 30px 60px -10px rgba(5, 36, 64, 0.5),
-    0 0 0 1px rgba(45, 212, 191, 0.3),
-    0 -8px 30px -6px rgba(45, 212, 191, 0.25);
+  border-color: var(--border-dark);
+  box-shadow: 0 26px 50px -10px rgba(5, 36, 64, 0.42);
 }
 .price-featured.price-card-inactive {
   box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.22);
@@ -2213,9 +2169,6 @@
 .price-featured .button-blue {
   background: var(--accent-primary);
   color: #ffffff;
-}
-.price-featured.price-card-active .button-blue {
-  box-shadow: 0 10px 24px -4px rgba(45, 212, 191, 0.35);
 }
 .price-featured .button-blue:hover {
   background: var(--accent-primary-hover);
