@@ -42,6 +42,7 @@ const niches = [
       "No caixa ou na mesa, convide o cliente a contar como foi a experiência. Um gesto simples no fim de um bom atendimento.",
     placement: "No caixa ou no balcão",
     color: "coffee",
+    image: "/balcao.jpg",
   },
   {
     label: "Beleza e bem-estar",
@@ -127,12 +128,30 @@ function UseCases() {
             </a>
           </div>
           <div className="niche-display">
-            <div className="scene-ring" aria-hidden="true" />
-            <div className="scene-counter" aria-hidden="true" />
-            <PlatePreview name={item.name} compact />
-            <span className="scene-note">
-              Simulação ilustrativa de aplicação
-            </span>
+            {'image' in item && item.image ? (
+              <div className="niche-photo-container">
+                <img
+                  src={item.image}
+                  alt={`Aplicação real da placa Phoenix no balcão — ${item.name}`}
+                  className="niche-photo-img"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                />
+                <span className="scene-note">
+                  Aplicação real da placa no balcão
+                </span>
+              </div>
+            ) : (
+              <>
+                <div className="scene-ring" aria-hidden="true" />
+                <div className="scene-counter" aria-hidden="true" />
+                <PlatePreview name={item.name} compact />
+                <span className="scene-note">
+                  Simulação ilustrativa de aplicação
+                </span>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -720,12 +739,18 @@ export function LandingPageView({
                     <ArrowUpRight size={17} />
                   </a>
                   <ul>
-                    {plan.features.map((feature) => (
-                       <li key={feature}>
-                        <Check size={16} />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
+                    {plan.features.map((feature) => {
+                      const isNfcFeature = feature.toLowerCase().includes("nfc configurado");
+                      return (
+                        <li
+                          key={feature}
+                          className={isNfcFeature ? "feature-highlighted" : ""}
+                        >
+                          <Check size={isNfcFeature ? 18 : 16} />
+                          <span>{feature}</span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </article>
               ))}
