@@ -1961,19 +1961,93 @@
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 55px;
+  gap: 22px;
+  margin-top: 68px;
+  perspective: 1200px;
+  align-items: stretch;
 }
 .price-card {
   position: relative;
   background: var(--bg-light-surface);
   border: 1px solid var(--border-light);
-  border-radius: 13px;
+  border-radius: 16px;
   padding: 32px 27px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  isolation: isolate;
+  will-change: transform, box-shadow;
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s ease,
+    background-color 0.4s ease !important;
+}
+.price-card > *:not(.price-card-spotlight):not(.price-featured-label) {
+  position: relative;
+  z-index: 2;
+}
+.price-card-spotlight {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  background:
+    radial-gradient(
+      360px circle at var(--mouse-x, 50%) var(--mouse-y, 20%),
+      rgba(12, 146, 149, 0.13),
+      rgba(45, 212, 191, 0.05) 45%,
+      transparent 75%
+    ),
+    radial-gradient(
+      ellipse 85% 35% at 50% 0%,
+      rgba(45, 212, 191, 0.16),
+      transparent 70%
+    );
+}
+.price-featured .price-card-spotlight {
+  background:
+    radial-gradient(
+      380px circle at var(--mouse-x, 50%) var(--mouse-y, 20%),
+      rgba(45, 212, 191, 0.22),
+      rgba(255, 255, 255, 0.08) 40%,
+      transparent 75%
+    ),
+    radial-gradient(
+      ellipse 90% 40% at 50% 0%,
+      rgba(255, 255, 255, 0.18),
+      rgba(45, 212, 191, 0.12) 45%,
+      transparent 75%
+    );
+}
+.price-card.price-card-active .price-card-spotlight {
+  opacity: 1;
+}
+.price-card.price-card-active:not(.will-reveal:not(.is-visible)) {
+  transform: perspective(1100px) translateY(-18px) scale(1.025) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  z-index: 5;
+}
+.price-card.price-card-inactive:not(.will-reveal:not(.is-visible)) {
+  transform: perspective(1100px) translateY(6px) scale(0.985);
+  z-index: 1;
+}
+.price-card:not(.price-featured).price-card-active {
+  border-color: rgba(12, 146, 149, 0.55);
+  box-shadow:
+    0 28px 55px -12px rgba(5, 36, 64, 0.18),
+    0 0 0 1px rgba(12, 146, 149, 0.22),
+    0 -8px 28px -8px rgba(45, 212, 191, 0.25);
+}
+.price-card:not(.price-featured).price-card-active .button-outline {
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-color: var(--accent-primary);
+  box-shadow: 0 10px 22px -4px rgba(12, 146, 149, 0.4);
 }
 .plan-eyebrow {
   font-size: 8px;
@@ -2026,6 +2100,12 @@
   font-size: 11px;
   padding: 14px 12px;
   border-radius: 7px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.25s ease;
 }
 .price-card ul {
   margin-top: 26px;
@@ -2077,6 +2157,16 @@
   color: var(--text-dark-title);
   box-shadow: 0 20px 35px -5px rgba(15, 23, 42, 0.35);
 }
+.price-featured.price-card-active {
+  border-color: rgba(45, 212, 191, 0.65);
+  box-shadow:
+    0 30px 60px -10px rgba(5, 36, 64, 0.5),
+    0 0 0 1px rgba(45, 212, 191, 0.3),
+    0 -8px 30px -6px rgba(45, 212, 191, 0.25);
+}
+.price-featured.price-card-inactive {
+  box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.22);
+}
 .price-featured-label {
   position: absolute;
   top: -16px;
@@ -2093,6 +2183,7 @@
   font-weight: 700;
   letter-spacing: 1px;
   border-radius: 6px;
+  z-index: 3;
 }
 .price-featured .plan-eyebrow {
   color: var(--accent-secondary);
@@ -2122,6 +2213,9 @@
 .price-featured .button-blue {
   background: var(--accent-primary);
   color: #ffffff;
+}
+.price-featured.price-card-active .button-blue {
+  box-shadow: 0 10px 24px -4px rgba(45, 212, 191, 0.35);
 }
 .price-featured .button-blue:hover {
   background: var(--accent-primary-hover);
@@ -3368,6 +3462,12 @@
   }
   .price-card {
     padding: 28px;
+  }
+  .price-card.price-card-active:not(.will-reveal:not(.is-visible)) {
+    transform: translateY(-4px) scale(1.01);
+  }
+  .price-card.price-card-inactive:not(.will-reveal:not(.is-visible)) {
+    transform: translateY(0) scale(1);
   }
   .price-card h3 {
     font-size: 21px;

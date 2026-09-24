@@ -183,6 +183,7 @@ export function LandingPageView({
 }: LandingPageViewProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [activePlan, setActivePlan] = useState<number>(1);
   const pageRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const contactUrl = whatsappLink(
@@ -723,54 +724,80 @@ export function LandingPageView({
                 empresa.
               </p>
             </div>
-            <div className="pricing-grid">
-              {plans.map((plan, index) => (
-                <article
-                  className={`price-card${index === 1 ? " price-featured" : ""}`}
-                  key={plan.name}
-                  data-reveal
-                >
-                  {index === 1 && (
-                    <div className="price-featured-label">
-                      <Sparkles size={13} /> PLACA + PRESENÇA DIGITAL
-                    </div>
-                  )}
-                  <span className="plan-eyebrow">{plan.label}</span>
-                  <h3>{plan.name}</h3>
-                  <p className="plan-description">{plan.description}</p>
-                  <div className="plan-price">
-                    <span>R$</span>
-                    <strong>{plan.displayPrice || plan.price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</strong>
-                  </div>
-                  <p className="plan-detail">{plan.detail}</p>
-                  <a
-                    className={`phx-button ${index === 1 ? "button-blue" : "button-outline"}`}
-                    href={whatsappLink(
-                      whatsappNumber,
-                      `Olá! Tenho interesse no pacote *${plan.name}* (R$ ${plan.displayPrice || plan.price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}) da Phoenix Automações. Podemos confirmar a personalização e as condições de entrega?`,
-                    )}
-                    target="_blank"
-                    rel="noopener noreferrer"
+            <div
+              className="pricing-grid"
+              onMouseLeave={() => setActivePlan(1)}
+            >
+              {plans.map((plan, index) => {
+                const isActive = activePlan === index;
+                return (
+                  <article
+                    className={`price-card${index === 1 ? " price-featured" : ""}${isActive ? " price-card-active" : " price-card-inactive"}`}
+                    key={plan.name}
+                    data-reveal
+                    onMouseEnter={() => setActivePlan(index)}
+                    onFocusCapture={() => setActivePlan(index)}
+                    onMouseMove={(e) => {
+                      const card = e.currentTarget;
+                      const rect = card.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const rx = ((y / rect.height) - 0.5) * -4.5;
+                      const ry = ((x / rect.width) - 0.5) * 4.5;
+                      card.style.setProperty("--mouse-x", `${x}px`);
+                      card.style.setProperty("--mouse-y", `${y}px`);
+                      card.style.setProperty("--rx", `${rx.toFixed(2)}deg`);
+                      card.style.setProperty("--ry", `${ry.toFixed(2)}deg`);
+                    }}
+                    onMouseLeave={(e) => {
+                      const card = e.currentTarget;
+                      card.style.setProperty("--rx", "0deg");
+                      card.style.setProperty("--ry", "0deg");
+                    }}
                   >
-                    {plan.cta}
-                    <ArrowUpRight size={17} />
-                  </a>
-                  <ul>
-                    {plan.features.map((feature) => {
-                      const isNfcFeature = feature.toLowerCase().includes("nfc configurado");
-                      return (
-                        <li
-                          key={feature}
-                          className={isNfcFeature ? "feature-highlighted" : ""}
-                        >
-                          <Check size={isNfcFeature ? 18 : 16} />
-                          <span>{feature}</span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </article>
-              ))}
+                    <div className="price-card-spotlight" aria-hidden="true" />
+                    {index === 1 && (
+                      <div className="price-featured-label">
+                        <Sparkles size={13} /> PLACA + PRESENÇA DIGITAL
+                      </div>
+                    )}
+                    <span className="plan-eyebrow">{plan.label}</span>
+                    <h3>{plan.name}</h3>
+                    <p className="plan-description">{plan.description}</p>
+                    <div className="plan-price">
+                      <span>R$</span>
+                      <strong>{plan.displayPrice || plan.price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</strong>
+                    </div>
+                    <p className="plan-detail">{plan.detail}</p>
+                    <a
+                      className={`phx-button ${index === 1 ? "button-blue" : "button-outline"}`}
+                      href={whatsappLink(
+                        whatsappNumber,
+                        `Olá! Tenho interesse no pacote *${plan.name}* (R$ ${plan.displayPrice || plan.price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}) da Phoenix Automações. Podemos confirmar a personalização e as condições de entrega?`,
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {plan.cta}
+                      <ArrowUpRight size={17} />
+                    </a>
+                    <ul>
+                      {plan.features.map((feature) => {
+                        const isNfcFeature = feature.toLowerCase().includes("nfc configurado");
+                        return (
+                          <li
+                            key={feature}
+                            className={isNfcFeature ? "feature-highlighted" : ""}
+                          >
+                            <Check size={isNfcFeature ? 18 : 16} />
+                            <span>{feature}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </article>
+                );
+              })}
             </div>
             <div className="pricing-note">
               <ShieldCheck size={19} />
