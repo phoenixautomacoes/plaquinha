@@ -42,7 +42,7 @@ const niches = [
       "No caixa ou na mesa, convide o cliente a contar como foi a experiência. Um gesto simples no fim de um bom atendimento.",
     placement: "No caixa ou no balcão",
     color: "coffee",
-    image: "/balcao.jpg",
+    image: "/balcao01.jpg",
   },
   {
     label: "Beleza e bem-estar",
@@ -79,7 +79,6 @@ const niches = [
 function UseCases() {
   const [active, setActive] = useState(0);
   const item = niches[active];
-  const Icon = item.icon;
   return (
     <section
       className="phx-section use-cases"
@@ -127,10 +126,7 @@ function UseCases() {
                   height="112"
                 />
               </div>
-              <span className="mini-eyebrow">
-                <Icon size={14} />
-                {item.placement}
-              </span>
+              <span className="mini-eyebrow">{item.placement}</span>
             </div>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
