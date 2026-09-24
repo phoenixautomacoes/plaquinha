@@ -1754,61 +1754,118 @@
   --scene-floor: #E2E8F0;
 }
 .niche-copy {
-  padding: 45px 55px;
+  padding: 44px 52px;
   align-self: center;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
-.niche-icon {
+.niche-top-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+  width: 100%;
+}
+.niche-google-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.85);
-  color: var(--accent-primary);
-  margin-bottom: 25px;
+  background: #ffffff;
+  padding: 10px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(203, 213, 225, 0.75);
+  box-shadow: 0 10px 25px -6px rgba(5, 36, 64, 0.08), 0 2px 6px rgba(5, 36, 64, 0.04);
+}
+.niche-google-img {
+  width: 195px;
+  height: 102px;
+  object-fit: cover;
+  object-position: center 48.5%;
+  display: block;
 }
 .niche-copy .mini-eyebrow {
-  color: var(--text-light-muted);
-  font-size: 8px;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent-primary);
+  background: rgba(12, 146, 149, 0.1);
+  border: 1px solid rgba(12, 146, 149, 0.22);
+  padding: 6px 13px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  margin-bottom: 0;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
 }
 .niche-copy h3 {
-  font-size: 28px;
-  line-height: 1.25;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.18;
   letter-spacing: -1px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 16px;
-  max-width: 350px;
+  max-width: 470px;
   color: var(--text-light-title);
 }
 .niche-copy p {
-  font-size: 12px;
-  line-height: 1.9;
-  max-width: 380px;
+  font-size: 15.5px;
+  line-height: 1.68;
+  max-width: 470px;
   color: var(--text-light-body);
-  margin-bottom: 23px;
+  margin-bottom: 20px;
+}
+.niche-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+.niche-highlights li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light-title);
+  background: rgba(255, 255, 255, 0.75);
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(203, 213, 225, 0.6);
+}
+.niche-highlights li svg {
+  color: var(--accent-primary);
+  stroke-width: 2.6;
+  flex-shrink: 0;
 }
 .text-link {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--accent-primary);
-  border-bottom: 1px solid var(--accent-primary);
-  padding-bottom: 5px;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--accent-primary);
+  padding: 13px 22px;
+  border-radius: 10px;
+  border-bottom: none;
+  box-shadow: 0 8px 20px -4px rgba(12, 146, 149, 0.35);
+  transition: all 0.2s ease;
 }
 .text-link:hover {
-  color: var(--accent-primary-hover);
-  border-bottom-color: var(--accent-primary-hover);
+  color: #ffffff;
+  background: var(--accent-primary-hover);
+  transform: translateY(-1px);
 }
 .niche-display {
   position: relative;
-  min-height: 370px;
+  min-height: 430px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1866,7 +1923,8 @@
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 370px;
+  min-height: 430px;
+  max-height: 510px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3264,18 +3322,17 @@
     grid-template-columns: 1fr;
   }
   .niche-copy {
-    padding: 28px 27px 6px;
+    padding: 32px 26px 24px;
   }
   .niche-copy h3 {
-    font-size: 27px;
+    font-size: 28px;
   }
   .niche-copy p {
-    font-size: 12px;
+    font-size: 14.5px;
   }
-  .niche-icon {
-    width: 39px;
-    height: 39px;
-    margin-bottom: 20px;
+  .niche-google-img {
+    width: 165px;
+    height: 86px;
   }
   .niche-display {
     min-height: 320px;

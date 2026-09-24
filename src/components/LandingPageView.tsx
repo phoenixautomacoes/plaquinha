@@ -117,12 +117,33 @@ function UseCases() {
         </div>
         <div className={`niche-scene niche-${item.color}`}>
           <div className="niche-copy">
-            <span className="niche-icon">
-              <Icon size={26} />
-            </span>
-            <span className="mini-eyebrow">{item.placement}</span>
+            <div className="niche-top-meta">
+              <div className="niche-google-badge">
+                <img
+                  src="/Google.01.png"
+                  alt="Avaliações 5 estrelas no Google"
+                  className="niche-google-img"
+                  width="210"
+                  height="112"
+                />
+              </div>
+              <span className="mini-eyebrow">
+                <Icon size={14} />
+                {item.placement}
+              </span>
+            </div>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
+            <ul className="niche-highlights">
+              <li>
+                <Check size={15} />
+                <span>Aproximação NFC + QR Code</span>
+              </li>
+              <li>
+                <Check size={15} />
+                <span>Avaliação em segundos sem app</span>
+              </li>
+            </ul>
             <a href="#personalizar" className="text-link">
               Experimentar com a minha marca <ArrowUpRight size={18} />
             </a>
