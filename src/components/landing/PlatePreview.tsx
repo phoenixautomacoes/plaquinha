@@ -28,7 +28,7 @@ export function PlatePreview({
     <div className={`plate-object${compact ? " plate-compact" : ""}`}>
       <div className="plate-face">
         <img
-          src="/template-google-avaliacoes-2.png"
+          src="/template-google-avaliacoes-v2.png"
           alt="Placa Phoenix NFC para Avaliações no Google"
           className="plate-bg-art"
           width="1410"

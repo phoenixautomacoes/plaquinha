@@ -494,7 +494,7 @@
   color: #CBD5E1;
 }
 .product-stage {
-  height: 368px;
+  height: 420px;
   position: relative;
   display: flex;
   align-items: center;
@@ -526,13 +526,13 @@
 }
 .product-plate {
   position: relative;
-  width: 214px;
+  width: 268px;
   transform: none;
   animation:
     plate-arrive 0.8s ease-out both,
     plate-levitate 5.5s ease-in-out 0.8s infinite;
   z-index: 2;
-  margin-top: -10px;
+  margin-top: -6px;
 }
 .plate-object {
   width: 100%;
@@ -593,7 +593,7 @@
   padding: 0 4px;
 }
 .plate-custom-name-zone .plate-business-name {
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
   font-weight: 800;
   line-height: 1.35;
@@ -2513,10 +2513,10 @@
     gap: 85px;
   }
   .product-stage {
-    height: 375px;
+    height: 435px;
   }
   .product-plate {
-    width: 212px;
+    width: 276px;
   }
 }
 @media (max-width: 1100px) {
@@ -2660,10 +2660,10 @@
     margin-top: 38px;
   }
   .product-stage {
-    height: 355px;
+    height: 400px;
   }
   .product-plate {
-    width: 205px;
+    width: 252px;
   }
   .product-float-tag {
     right: 32px;
