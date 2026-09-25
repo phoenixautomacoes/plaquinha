@@ -297,7 +297,13 @@ export function LandingPageView({
                 <br />
                 <span>lembrado.</span>
                 <span className="heading-spark" aria-hidden="true">
-                  ✳
+                  <img
+                    src="/Estrelas.png"
+                    alt=""
+                    width="74"
+                    height="13"
+                    decoding="async"
+                  />
                 </span>
               </h1>
               <p className="hero-description">
