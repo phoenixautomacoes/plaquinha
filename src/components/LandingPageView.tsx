@@ -351,28 +351,35 @@ export function LandingPageView({
           <div className="phx-container">
             {[
               {
-                icon: Radio,
+                icon: "/NFC.png",
                 title: "NFC + QR Code",
                 text: "Duas formas de acessar",
               },
               {
-                icon: Palette,
+                icon: "/identidade.png",
                 title: "A sua identidade",
                 text: "Nome e logo na placa",
               },
               {
-                icon: Smartphone,
+                icon: "/app.png",
                 title: "Sem app específico",
                 text: "Acesso pelo celular",
               },
               {
-                icon: ShieldCheck,
+                icon: "/Suporte.png",
                 title: "Suporte Phoenix",
                 text: "Ajuda na configuração",
               },
             ].map((item) => (
               <div className="trust-item" key={item.title}>
-                <item.icon size={22} />
+                <img
+                  src={item.icon}
+                  alt=""
+                  width="22"
+                  height="22"
+                  className="trust-icon"
+                  decoding="async"
+                />
                 <div>
                   <strong>{item.title}</strong>
                   <span>{item.text}</span>

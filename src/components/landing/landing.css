@@ -1043,6 +1043,13 @@
   color: var(--accent-primary);
   stroke-width: 1.4;
 }
+.trust-item > img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
 .trust-item strong {
   display: block;
   font-size: 14px;
@@ -3205,7 +3212,8 @@
   .trust-item span {
     font-size: 11px;
   }
-  .trust-item > svg {
+  .trust-item > svg,
+  .trust-item > img {
     width: 20px;
     height: 20px;
   }
