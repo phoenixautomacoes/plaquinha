@@ -476,6 +476,22 @@
   gap: 12px;
   letter-spacing: 0.2px;
 }
+@keyframes configurator-pulse {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    box-shadow:
+      0 32px 80px rgba(0, 0, 0, 0.4),
+      0 0 0 rgba(45, 212, 191, 0),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    transform: scale(1.018) translateY(-3px);
+    box-shadow:
+      0 38px 90px rgba(0, 0, 0, 0.46),
+      0 0 26px rgba(45, 212, 191, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+}
 .configurator {
   position: relative;
   min-width: 0;
@@ -489,6 +505,12 @@
   box-shadow:
     0 32px 80px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  animation: configurator-pulse 3.6s ease-in-out infinite;
+  will-change: transform;
+}
+.configurator:hover,
+.configurator:focus-within {
+  animation-play-state: paused;
 }
 .configurator-topline {
   position: absolute;
