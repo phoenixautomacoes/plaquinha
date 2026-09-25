@@ -2297,13 +2297,14 @@
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  background: rgba(45, 212, 191, 0.12);
+  background: #15394E;
   border: 1px solid rgba(45, 212, 191, 0.35);
   color: var(--accent-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
 }
 .systems-inquiry-icon img {
   width: 28px;
