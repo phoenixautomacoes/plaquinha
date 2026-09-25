@@ -2848,42 +2848,42 @@
     padding: 75px 0;
   }
   .ecosystem-node {
-    width: 190px;
+    width: calc(50% - 7px);
     padding: 12px;
     gap: 10px;
   }
   .ecosystem-node strong {
-    font-size: 10px;
+    font-size: 11px;
   }
   .ecosystem-node small {
-    font-size: 7px;
-  }
-  .node-sofia {
-    top: 110px;
-    right: -6px;
+    font-size: 9px;
   }
   .node-web {
-    top: 24px;
+    top: 18px;
     left: 0;
   }
+  .node-sofia {
+    top: 18px;
+    right: 0;
+  }
   .node-crm {
-    bottom: 100px;
-    left: -4px;
+    bottom: 20px;
+    left: 0;
   }
   .node-nfc {
-    bottom: 16px;
+    bottom: 20px;
     right: 0;
   }
   .ecosystem-orbit {
     width: 290px;
-    height: 350px;
+    height: 290px;
   }
   .ecosystem-center {
-    width: 110px;
-    height: 110px;
+    width: 114px;
+    height: 114px;
   }
   .ecosystem-map {
-    height: 400px;
+    height: 370px;
   }
   .ecosystem-center img {
     height: 45px;
@@ -3342,46 +3342,71 @@
     font-size: 10px;
   }
   .ecosystem-map {
-    height: 390px;
+    height: 365px;
     max-width: 430px;
     width: 100%;
     margin-inline: auto;
   }
   .ecosystem-node {
-    width: 215px;
-    gap: 10px;
-    padding: 14px;
+    width: calc(50% - 6px);
+    min-height: 76px;
+    gap: 9px;
+    padding: 12px 11px;
+    align-items: flex-start;
+  }
+  .ecosystem-node > svg:first-child {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
   }
   .ecosystem-node strong {
-    font-size: 12.5px;
+    font-size: 12px;
+    line-height: 1.25;
+    padding-right: 12px;
   }
   .ecosystem-node small {
     font-size: 10px;
+    line-height: 1.35;
+    margin-top: 3px;
+  }
+  .node-arrow {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
   }
   .node-web {
-    left: 1px;
-    top: 16px;
+    left: 0;
+    top: 10px;
   }
   .node-sofia {
     right: 0;
-    top: 99px;
+    top: 10px;
   }
   .node-crm {
     left: 0;
-    bottom: 105px;
+    bottom: 18px;
   }
   .node-nfc {
-    right: 1px;
-    bottom: 23px;
+    right: 0;
+    bottom: 18px;
+  }
+  .node-nfc .you-are-here {
+    bottom: -9px;
+    right: 8px;
+    font-size: 7px;
+    padding: 3px 7px;
+    letter-spacing: 0.7px;
   }
   .ecosystem-center {
     top: 50%;
-    width: 118px;
-    height: 118px;
+    width: 114px;
+    height: 114px;
   }
   .ecosystem-center img {
-    width: 48px;
-    height: 54px;
+    width: 46px;
+    height: 52px;
   }
   .ecosystem-center strong {
     font-size: 11.5px;
@@ -3390,12 +3415,12 @@
     font-size: 7.5px;
   }
   .ecosystem-orbit {
-    width: 300px;
-    height: 320px;
+    width: 295px;
+    height: 295px;
   }
   .ecosystem-orbit.orbit-inner {
-    width: 180px;
-    height: 180px;
+    width: 176px;
+    height: 176px;
   }
   .details-section {
     padding-bottom: 0;
@@ -3704,8 +3729,15 @@
     font-size: 9px;
   }
   .ecosystem-node {
-    width: 193px;
-    padding: 12px;
+    width: calc(50% - 5px);
+    padding: 10px 9px;
+    gap: 7px;
+  }
+  .ecosystem-node strong {
+    font-size: 11px;
+  }
+  .ecosystem-node small {
+    font-size: 9px;
   }
   .niche-selector > button {
     font-size: 7px;
