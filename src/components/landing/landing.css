@@ -465,6 +465,9 @@
 .configurator {
   position: relative;
   min-width: 0;
+  max-width: 390px;
+  width: 100%;
+  justify-self: center;
   border: 1px solid var(--border-dark);
   border-radius: 20px;
   background: #ffffff;
@@ -596,7 +599,7 @@
   padding: 0 8px;
 }
 .plate-custom-name-zone .plate-business-name {
-  font-size: clamp(16px, 2.2vw, 23px);
+  font-size: clamp(14px, 1.75vw, 18px);
   text-transform: uppercase;
   font-weight: 800;
   line-height: 1.35;
@@ -2657,7 +2660,7 @@
     margin-top: 28px;
   }
   .configurator {
-    max-width: 520px;
+    max-width: 390px;
     width: 100%;
     justify-self: center;
   }
