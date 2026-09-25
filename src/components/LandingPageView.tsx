@@ -440,18 +440,16 @@ export function LandingPageView({
                 </p>
               </article>
               <article className="step-card" data-reveal>
-                <div className="step-visual step-review" aria-hidden="true">
-                  <div className="review-illustration">
-                    <span className="review-avatar">✦</span>
-                    <strong>A experiência é do cliente.</strong>
-                    <span className="outline-stars">
-                      {[1, 2, 3, 4, 5].map((i) => (
-                        <Star key={i} size={23} />
-                      ))}
-                    </span>
-                    <span className="review-line" />
-                    <span className="review-line short" />
-                  </div>
+                <div className="step-visual step-review">
+                  <img
+                    src="/Avaliacoes.png"
+                    alt="Cliente escolhendo 5 estrelas na avaliação pelo celular"
+                    className="step-photo step-photo-center"
+                    width="688"
+                    height="384"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <h3>A opinião ganha espaço.</h3>
                 <p>
