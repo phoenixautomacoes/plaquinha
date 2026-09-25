@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Check, ImagePlus, Radio, Upload, X } from "lucide-react";
+import { ArrowUpRight, Check, ImagePlus, Upload, X } from "lucide-react";
 import { PlatePreview } from "./PlatePreview";
 import { whatsappLink } from "./content";
 
@@ -94,14 +94,6 @@ export function PlateConfigurator({
       <div className="product-stage">
         <div className="product-orbit orbit-one" aria-hidden="true" />
         <div className="product-orbit orbit-two" aria-hidden="true" />
-        <div className="product-float-tag">
-          <Radio size={17} />
-          <span>
-            Conexão por
-            <br />
-            <strong>aproximação</strong>
-          </span>
-        </div>
         <div className="product-plate">
           <PlatePreview name={name} logo={logo} />
         </div>
