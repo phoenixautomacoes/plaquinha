@@ -422,23 +422,16 @@ export function LandingPageView({
                 </p>
               </article>
               <article className="step-card" data-reveal>
-                <div className="step-visual step-open" aria-hidden="true">
-                  <div className="mini-browser">
-                    <div>
-                      <i />
-                      <i />
-                      <i />
-                      <span>sua empresa</span>
-                    </div>
-                    <span className="browser-pin">
-                      <Globe2 size={26} />
-                    </span>
-                    <strong>Você chegou.</strong>
-                    <span className="browser-button">
-                      Avaliar minha experiência <ArrowUpRight size={12} />
-                    </span>
-                  </div>
-                  <MousePointer2 className="cursor-icon" />
+                <div className="step-visual step-open">
+                  <img
+                    src="/destino-certo.png"
+                    alt="Celular mostrando o destino configurado: WhatsApp, Site e Avaliações no Google"
+                    className="step-photo step-photo-center"
+                    width="632"
+                    height="424"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <h3>O destino já está certo.</h3>
                 <p>

@@ -1125,6 +1125,9 @@
   object-position: center 42%;
   display: block;
 }
+.step-photo-center {
+  object-position: center center;
+}
 .step-number {
   font-size: 10px;
   color: var(--accent-primary);
