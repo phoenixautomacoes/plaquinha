@@ -795,7 +795,7 @@ export function LandingPageView({
                   title="Consulte Valores para Sistemas no WhatsApp"
                 >
                   <img
-                    src="/whatsapp.png"
+                    src="/whatsapp.png?v=2"
                     alt=""
                     width="22"
                     height="22"
@@ -891,7 +891,7 @@ export function LandingPageView({
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/whatsapp.png"
+                  src="/whatsapp.png?v=2"
                   alt=""
                   width="20"
                   height="20"
@@ -966,7 +966,7 @@ export function LandingPageView({
         aria-label="Falar com a Phoenix no WhatsApp"
       >
         <img
-          src="/whatsapp.png"
+          src="/whatsapp.png?v=2"
           alt=""
           width="48"
           height="48"
