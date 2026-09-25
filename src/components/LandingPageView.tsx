@@ -685,10 +685,10 @@ export function LandingPageView({
               <div className="systems-inquiry-content">
                 <div className="systems-inquiry-icon" aria-hidden="true">
                   <img
-                    src="/money.png?v=2"
+                    src="/money.png?v=3"
                     alt=""
-                    width="28"
-                    height="28"
+                    width="40"
+                    height="40"
                     decoding="async"
                   />
                 </div>
