@@ -97,9 +97,6 @@ export function PlateConfigurator({
         <div className="product-plate">
           <PlatePreview name={name} logo={logo} />
         </div>
-        <div className="product-caption">
-          <span className="caption-line" /> Acrílico. Sua marca. Mais conexão.
-        </div>
       </div>
       <div className="configurator-form">
         <div className="configurator-title-row">
