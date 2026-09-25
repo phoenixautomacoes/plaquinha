@@ -24,11 +24,11 @@ export function PlatePreview({
     <div className={`plate-object${compact ? " plate-compact" : ""}`}>
       <div className="plate-face">
         <img
-          src="/placa-phoenix-13x15.png"
+          src="/template-google-avaliacoes-2.png"
           alt="Placa Phoenix NFC para Avaliações no Google"
           className="plate-bg-art"
-          width="1535"
-          height="1771"
+          width="1410"
+          height="2000"
           loading="lazy"
         />
         <div className="plate-custom-overlay">
