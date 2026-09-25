@@ -2065,12 +2065,27 @@
   font-size: 11px;
   padding: 14px 12px;
   border-radius: 7px;
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-color: var(--accent-primary);
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
     border-color 0.3s ease,
     box-shadow 0.3s ease,
     transform 0.25s ease;
+}
+.price-card .phx-button:hover {
+  background: var(--accent-primary-hover);
+  border-color: var(--accent-primary-hover);
+  color: #ffffff;
+}
+.whatsapp-btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
 }
 .price-card ul {
   margin-top: 26px;
@@ -2484,21 +2499,28 @@
   bottom: 23px;
   right: 23px;
   z-index: 40;
-  background: var(--accent-primary);
-  color: #fff;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgba(45, 212, 191, 0.4);
-  border-radius: 50%;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s, background 0.2s;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.28));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.floating-whatsapp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 .floating-whatsapp:hover {
-  transform: translateY(-3px);
-  background: var(--accent-primary-hover);
+  transform: translateY(-3px) scale(1.05);
+  background: transparent;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
 }
 [data-reveal] {
   transition:

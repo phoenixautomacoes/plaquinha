@@ -164,7 +164,7 @@ export function LandingPageView({
   whatsappNumber = "5551926347571",
 }: LandingPageViewProps) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activePlan, setActivePlan] = useState<number>(1);
   const pageRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -739,7 +739,7 @@ export function LandingPageView({
                     </div>
                     <p className="plan-detail">{plan.detail}</p>
                     <a
-                      className={`phx-button ${index === 1 ? "button-blue" : "button-outline"}`}
+                      className="phx-button button-blue"
                       href={whatsappLink(
                         whatsappNumber,
                         `Olá! Tenho interesse no pacote *${plan.name}* (R$ ${plan.displayPrice || plan.price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}) da Phoenix Automações. Podemos confirmar a personalização e as condições de entrega?`,
@@ -803,7 +803,14 @@ export function LandingPageView({
                   id="btn-consulte-valores-sistemas"
                   title="Consulte Valores para Sistemas no WhatsApp"
                 >
-                  <MessageCircle size={18} />
+                  <img
+                    src="/whatsapp.png"
+                    alt=""
+                    width="22"
+                    height="22"
+                    className="whatsapp-btn-icon"
+                    decoding="async"
+                  />
                   <span>CONSULTE VALORES PARA SISTEMAS</span>
                   <ArrowUpRight size={17} />
                 </a>
@@ -892,7 +899,14 @@ export function LandingPageView({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle size={18} />
+                <img
+                  src="/whatsapp.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                  className="whatsapp-btn-icon"
+                  decoding="async"
+                />
                 Falar no WhatsApp
               </a>
             </div>
@@ -960,7 +974,13 @@ export function LandingPageView({
         rel="noopener noreferrer"
         aria-label="Falar com a Phoenix no WhatsApp"
       >
-        <MessageCircle size={23} />
+        <img
+          src="/whatsapp.png"
+          alt=""
+          width="48"
+          height="48"
+          decoding="async"
+        />
       </a>
     </div>
   );

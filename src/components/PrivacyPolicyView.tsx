@@ -544,7 +544,7 @@ export const PrivacyPolicyView: React.FC<PrivacyPolicyViewProps> = ({ onBack }) 
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a
-                href="mailto:privacidade@phoenixautomacoes.com.br"
+                href="mailto:contato@phoenixautomacoes.com.br"
                 className="flex items-center gap-3 p-4 rounded-xl bg-slate-950/80 border border-slate-800 hover:border-blue-500/60 hover:bg-slate-950 transition-all group"
               >
                 <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
@@ -553,7 +553,7 @@ export const PrivacyPolicyView: React.FC<PrivacyPolicyViewProps> = ({ onBack }) 
                 <div className="overflow-hidden">
                   <span className="text-[11px] text-slate-400 uppercase font-semibold block">E-mail do DPO</span>
                   <span className="text-xs sm:text-sm font-bold text-white group-hover:text-blue-400 transition-colors truncate block">
-                    privacidade@phoenixautomacoes.com.br
+                    contato@phoenixautomacoes.com.br
                   </span>
                 </div>
               </a>
@@ -612,7 +612,7 @@ export const PrivacyPolicyView: React.FC<PrivacyPolicyViewProps> = ({ onBack }) 
             </a>
             <span>•</span>
             <a
-              href="mailto:privacidade@phoenixautomacoes.com.br"
+              href="mailto:contato@phoenixautomacoes.com.br"
               className="hover:text-white transition-colors"
             >
               Contato DPO
