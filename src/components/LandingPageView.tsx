@@ -404,19 +404,16 @@ export function LandingPageView({
             </div>
             <div className="steps-grid">
               <article className="step-card" data-reveal>
-                <div className="step-visual step-touch" aria-hidden="true">
-                  <span className="touch-signal">
-                    <Radio />
-                  </span>
-                  <div className="mini-phone">
-                    <span />
-                    <Smartphone size={30} />
-                    <small>NFC</small>
-                  </div>
-                  <div className="mini-touch-plate">
-                    <QrCode size={35} />
-                    <span>PHOENIX</span>
-                  </div>
+                <div className="step-visual step-touch">
+                  <img
+                    src="/balcao2.jpg"
+                    alt="Cliente aproximando o celular da placa NFC da Phoenix no balcão"
+                    className="step-photo"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <span className="step-number">01</span>
                 <h3>Aproxime ou escaneie.</h3>
