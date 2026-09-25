@@ -31,9 +31,11 @@ export function PlatePreview({
           src="/template-google-avaliacoes-v2.png"
           alt="Placa Phoenix NFC para Avaliações no Google"
           className="plate-bg-art"
-          width="1410"
-          height="2000"
-          loading="lazy"
+          width="650"
+          height="922"
+          loading={compact ? "lazy" : "eager"}
+          fetchPriority={compact ? "auto" : "high"}
+          decoding="async"
         />
         {hasCustomLogo && (
           <div className="plate-custom-logo-zone">
