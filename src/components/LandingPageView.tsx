@@ -375,8 +375,8 @@ export function LandingPageView({
                 <img
                   src={item.icon}
                   alt=""
-                  width="22"
-                  height="22"
+                  width="36"
+                  height="36"
                   className="trust-icon"
                   decoding="async"
                 />
