@@ -684,7 +684,13 @@ export function LandingPageView({
             <div className="systems-inquiry-box" data-reveal id="consulte-sistemas">
               <div className="systems-inquiry-content">
                 <div className="systems-inquiry-icon" aria-hidden="true">
-                  <Layers3 size={24} />
+                  <img
+                    src="/money.png?v=2"
+                    alt=""
+                    width="28"
+                    height="28"
+                    decoding="async"
+                  />
                 </div>
                 <div className="systems-inquiry-text">
                   <span className="systems-inquiry-badge">AUTOMAÇÃO &amp; SISTEMAS SOB MEDIDA</span>

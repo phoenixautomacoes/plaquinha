@@ -2305,6 +2305,12 @@
   justify-content: center;
   flex-shrink: 0;
 }
+.systems-inquiry-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
 .systems-inquiry-text {
   display: flex;
   flex-direction: column;
