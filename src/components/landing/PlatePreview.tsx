@@ -20,6 +20,10 @@ export function PlatePreview({
   logo?: string | null;
   compact?: boolean;
 }) {
+  const trimmedName = name.trim();
+  const hasCustomLogo = Boolean(logo);
+  const hasCustomName = Boolean(trimmedName);
+
   return (
     <div className={`plate-object${compact ? " plate-compact" : ""}`}>
       <div className="plate-face">
@@ -31,27 +35,21 @@ export function PlatePreview({
           height="2000"
           loading="lazy"
         />
-        <div className="plate-custom-overlay">
-          <div className="plate-business">
-            <div className="plate-logo">
-              {logo ? (
-                <img
-                  src={logo}
-                  alt="Logotipo enviado para a prévia"
-                  width="48"
-                  height="48"
-                />
-              ) : (
-                <span className="google-g" aria-hidden="true">
-                  G
-                </span>
-              )}
-            </div>
-            <span className="plate-business-name">
-              {name.trim() || "Sua empresa"}
-            </span>
+        {hasCustomLogo && (
+          <div className="plate-custom-logo-zone">
+            <img
+              src={logo!}
+              alt="Logotipo enviado para a prévia"
+              width="52"
+              height="52"
+            />
           </div>
-        </div>
+        )}
+        {hasCustomName && (
+          <div className="plate-custom-name-zone">
+            <span className="plate-business-name">{trimmedName}</span>
+          </div>
+        )}
       </div>
       <div className="plate-foot" aria-hidden="true" />
     </div>
