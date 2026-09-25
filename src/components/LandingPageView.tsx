@@ -87,7 +87,6 @@ function UseCases() {
     >
       <div className="phx-container">
         <div className="section-heading" data-reveal>
-          <span className="section-index">04 / FEITA PARA O SEU NEGÓCIO</span>
           <h2 id="use-cases-title">
             Em cada balcão,
             <br />
@@ -96,23 +95,6 @@ function UseCases() {
           <p>
             Onde existe um bom atendimento, existe uma oportunidade de conexão.
           </p>
-        </div>
-        <div
-          className="niche-selector"
-          role="group"
-          aria-label="Escolha um segmento"
-        >
-          {niches.map((niche, index) => (
-            <button
-              key={niche.label}
-              type="button"
-              aria-pressed={active === index}
-              onClick={() => setActive(index)}
-            >
-              <niche.icon size={18} />
-              {niche.label}
-            </button>
-          ))}
         </div>
         <div className={`niche-scene niche-${item.color}`}>
           <div className="niche-copy">
@@ -402,9 +384,6 @@ export function LandingPageView({
           <div className="phx-container">
             <div className="section-heading split-heading" data-reveal>
               <div>
-                <span className="section-index">
-                  01 / SIMPLES PARA QUEM USA
-                </span>
                 <h2 id="how-title">
                   Menos caminhos.
                   <br />
@@ -502,9 +481,6 @@ export function LandingPageView({
         >
           <div className="phx-container ecosystem-layout">
             <div className="ecosystem-copy" data-reveal>
-              <span className="section-index">
-                02 / CONEXÕES QUE SE COMPLETAM
-              </span>
               <h2 id="ecosystem-title">
                 Uma placa no balcão.
                 <br />
@@ -607,9 +583,6 @@ export function LandingPageView({
         >
           <div className="phx-container">
             <div className="section-heading" data-reveal>
-              <span className="section-index">
-                03 / PEQUENA NO TAMANHO. PENSADA NOS DETALHES.
-              </span>
               <h2 id="details-title">
                 Tecnologia que combina
                 <br />
@@ -708,9 +681,6 @@ export function LandingPageView({
           <div className="phx-container">
             <div className="section-heading split-heading" data-reveal>
               <div>
-                <span className="section-index">
-                  05 / ESCOLHA SEU PRÓXIMO PASSO
-                </span>
                 <h2 id="pricing-title">
                   Comece pelo balcão.
                   <br />
@@ -849,9 +819,6 @@ export function LandingPageView({
         >
           <div className="phx-container faq-layout">
             <div className="section-heading" data-reveal>
-              <span className="section-index">
-                06 / ANTES DO PRIMEIRO TOQUE
-              </span>
               <h2 id="faq-title">
                 Ficou alguma
                 <br />
@@ -907,9 +874,6 @@ export function LandingPageView({
         <section className="final-section" aria-labelledby="final-title">
           <div className="phx-container final-content" data-reveal>
             <div className="final-orbit" aria-hidden="true" />
-            <span className="section-index">
-              O PRÓXIMO TOQUE PODE SER NA SUA MARCA.
-            </span>
             <h2 id="final-title">
               Seu balcão tem muito
               <br />
