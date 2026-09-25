@@ -90,7 +90,6 @@ export function PlateConfigurator({
         <span>
           <span className="status-dot" /> PRÉVIA AO VIVO
         </span>
-        <span>13 × 15 cm</span>
       </div>
       <div className="product-stage">
         <div className="product-orbit orbit-one" aria-hidden="true" />

@@ -686,7 +686,6 @@ export function LandingPageView({
                 <div className="size-visual" aria-hidden="true">
                   <div>
                     <Radio size={36} />
-                    <span>13 × 15 cm</span>
                   </div>
                   <span>
                     PEQUENA NO ESPAÇO.
