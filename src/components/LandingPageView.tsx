@@ -415,7 +415,6 @@ export function LandingPageView({
                     decoding="async"
                   />
                 </div>
-                <span className="step-number">01</span>
                 <h3>Aproxime ou escaneie.</h3>
                 <p>
                   Encoste um celular compatível na área NFC ou use a câmera para
@@ -441,7 +440,6 @@ export function LandingPageView({
                   </div>
                   <MousePointer2 className="cursor-icon" />
                 </div>
-                <span className="step-number">02</span>
                 <h3>O destino já está certo.</h3>
                 <p>
                   A página abre no celular: avaliações no Google, seu site,
@@ -462,7 +460,6 @@ export function LandingPageView({
                     <span className="review-line short" />
                   </div>
                 </div>
-                <span className="step-number">03</span>
                 <h3>A opinião ganha espaço.</h3>
                 <p>
                   Seu cliente escolhe a nota e escreve a avaliação, com
